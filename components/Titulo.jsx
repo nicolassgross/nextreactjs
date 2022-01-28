@@ -1,8 +1,14 @@
-export default function Titulo(text) {
-    return (
-        <div>
-            <h1>{text.principal}</h1>
-            <h2>{text.secundario}</h2>
-        </div>
-    )
+export default function Titulo(props) {
+
+    return props.pequeno ? (
+        <>
+            <p>{props.principal}</p>
+            <p>{props.secundario}</p>
+        </>
+        ) : (
+        <>
+            <h1>{props.principal}</h1>
+            <h1>{props.secundario}</h1>
+        </> 
+        )   
 }
